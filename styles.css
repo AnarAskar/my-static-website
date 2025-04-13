@@ -9,18 +9,19 @@ body {
 }
 
 header {
-    background-color: #1a1a1a; /* Almost black initial color */
+    background-color: #1a1a1a;
     color: white;
     padding: 1rem 0;
-    position: relative;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     transition: all 0.3s ease;
 }
 
 header.sticky {
-    background-color: #1e3a8a; /* Dark navy blue, different from hero */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #1e3a8a;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -83,7 +84,7 @@ header.sticky {
 
 /* Section Spacing */
 main {
-    padding: 0 1rem;
+    padding: 80px 1rem 0 1rem; /* Increased top padding to account for fixed header */
 }
 
 section {
@@ -109,6 +110,8 @@ h2 {
     background-color: navy;
     color: white;
     margin-top: 0;
+    margin-top: -80px; /* Offset the main padding for full-screen hero */
+    padding-top: 120px; /* Add padding to push content below navbar */
 }
 
 #hero h1 {
@@ -356,7 +359,8 @@ h2 {
         justify-content: center;
         align-items: center;
         transition: 0.3s ease-in-out;
-        z-index: 99;
+        z-index: 98; /* Keep it below the header */
+        padding-top: 70px; /* Add padding to account for fixed header */
     }
 
     .nav-links.active {
