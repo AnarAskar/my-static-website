@@ -1,4 +1,8 @@
 /* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -396,6 +400,54 @@ h2 {
     .contact-form textarea {
         padding: 0.8rem;
         font-size: 16px; /* Prevents zoom on mobile */
+    }
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive About Section */
+@media screen and (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    #about .about-text {
+        order: 2;
+    }
+
+    #about .about-image {
+        order: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    #about .about-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .about-text h2 {
+        text-align: center;
     }
 }
 
