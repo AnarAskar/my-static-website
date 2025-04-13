@@ -1,11 +1,12 @@
-// Add interactivity if needed, such as smooth scrolling or form validation
+// Add sticky navbar functionality
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    const hero = document.querySelector('#hero');
+    const heroBottom = hero.getBoundingClientRect().bottom;
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+    if (heroBottom <= 0) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
 });

@@ -9,57 +9,110 @@ body {
 }
 
 header {
-    background-color: navy;
+    background-color: #1a1a1a; /* Almost black initial color */
     color: white;
     padding: 1rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+header.sticky {
+    background-color: #1e3a8a; /* Dark navy blue, different from hero */
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar ul {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     margin: 0;
     padding: 0;
 }
 
-.navbar li {
-    margin: 0 1rem;
-}
-
-.navbar a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+.nav-links a:not(.cta-button):hover {
+    color: #a5b4fc; /* Light purple/blue on hover */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links .cta-button {
+    background-color: #f59e0b; /* Warm orange */
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.nav-links .cta-button:hover {
+    background-color: #d97706; /* Darker orange on hover */
+    transform: translateY(-1px);
 }
 
 /* Updated Hero Section */
 #hero {
     text-align: center;
     padding: 4rem 1rem;
-    background-color: navy; /* Changed from gradient to solid color */
+    background-color: navy;
     color: white;
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: white;
-    color: navy;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+#hero h1 {
+    font-size: 3rem; /* Increased size for visual hierarchy */
 }
 
-.cta-button:hover {
-    background-color: lightgray;
+#hero h2 {
+    font-size: 2rem; /* Increased size for visual hierarchy */
+}
+
+/* Updated About Me Section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about .about-text {
+    flex: 1;
+}
+
+#about .about-image {
+    flex: 1;
+    text-align: center;
+}
+
+#about .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 /* Section Styles */
@@ -94,6 +147,9 @@ h2 {
     width: 50px;
     height: 50px;
     margin-bottom: 0.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Updated Projects Section */
