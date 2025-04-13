@@ -1,12 +1,17 @@
-// Add sticky navbar functionality
-window.addEventListener('scroll', function () {
-    const header = document.querySelector('header');
-    const hero = document.querySelector('#hero');
-    const heroBottom = hero.getBoundingClientRect().bottom;
+// Hamburger Menu Functionality
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links a');
 
-    if (heroBottom <= 0) {
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
-    }
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when a link is clicked
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
 });
