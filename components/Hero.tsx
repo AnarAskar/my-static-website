@@ -5,7 +5,10 @@ import { ArrowRight, Mail, Download, ShieldCheck } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 sm:py-32 bg-zinc-950">
+    <section
+      id="about"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 sm:py-32 bg-zinc-950"
+    >
       {/* Abstract Glowing Backgrounds */}
       <div className="absolute inset-0 z-0">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl" />
@@ -15,7 +18,6 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
           {/* Hero Left Content */}
           <div className="col-span-1 lg:col-span-7 space-y-8 text-center lg:text-left">
             <motion.div
@@ -40,7 +42,7 @@ export default function Hero() {
                   Anar Askar
                 </span>
               </motion.h1>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -49,14 +51,25 @@ export default function Hero() {
               >
                 Full Stack & Mobile Developer
               </motion.p>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed"
               >
-                I am a dedicated software engineer specializing in building high-fidelity web platforms and mobile applications using <span className="text-white font-semibold">React Native Expo</span>, <span className="text-white font-semibold">Next.js</span>, and modern tech stacks. I thrive on translating elegant designs into pixel-perfect, highly optimized, and responsive user experiences.
+                I am a dedicated software engineer specializing in building
+                high-fidelity web platforms and mobile applications using{" "}
+                <span className="text-white font-semibold">
+                  React Native Expo
+                </span>
+                , <span className="text-white font-semibold">Next.js</span>,{" "}
+                <span className="text-white font-semibold">
+                  Django REST Framework
+                </span>
+                , and modern tech stacks. I thrive on translating elegant
+                designs into pixel-perfect, highly optimized, and responsive
+                user experiences.
               </motion.p>
             </div>
 
@@ -98,8 +111,16 @@ export default function Hero() {
                 className="text-zinc-500 hover:text-white transition-colors duration-200"
                 aria-label="GitHub Profile"
               >
-                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" />
+                <svg
+                  className="h-6 w-6 fill-current"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"
+                  />
                 </svg>
               </a>
 
@@ -111,8 +132,16 @@ export default function Hero() {
                 className="text-zinc-500 hover:text-white transition-colors duration-200"
                 aria-label="LinkedIn Profile"
               >
-                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
+                <svg
+                  className="h-6 w-6 fill-current"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </a>
 
@@ -137,29 +166,36 @@ export default function Hero() {
             >
               {/* Spinning gradient border */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-violet-600 via-indigo-500 to-fuchsia-500 animate-[spin_8s_linear_infinite] opacity-70 blur-xs" />
-              
+
               {/* Inner Circle Image Container */}
               <div className="absolute inset-1.5 rounded-full bg-zinc-950 flex items-center justify-center overflow-hidden border-2 border-zinc-900">
                 {/* Simulated professional tech avatar or avatar graphic */}
                 <div className="text-center p-8">
                   <span className="block text-5xl sm:text-6xl mb-4">🚀</span>
-                  <div className="font-extrabold text-white text-xl tracking-wider uppercase">Anar Askar</div>
-                  <div className="text-zinc-400 text-xs mt-1">Mobile & Web Engineer</div>
+                  <div className="font-extrabold text-white text-xl tracking-wider uppercase">
+                    Anar Askar
+                  </div>
+                  <div className="text-zinc-400 text-xs mt-1">
+                    Mobile & Web Engineer
+                  </div>
                 </div>
               </div>
 
               {/* Decorative mini badges */}
               <div className="absolute -top-4 -left-4 p-3 bg-zinc-900/90 border border-zinc-800 rounded-xl shadow-lg flex items-center gap-2">
                 <span className="text-xl">📱</span>
-                <span className="text-xs font-bold text-white">React Native</span>
+                <span className="text-xs font-bold text-white">
+                  React Native
+                </span>
               </div>
               <div className="absolute -bottom-4 -right-4 p-3 bg-zinc-900/90 border border-zinc-800 rounded-xl shadow-lg flex items-center gap-2">
                 <span className="text-xl">⚡</span>
-                <span className="text-xs font-bold text-white">Next.js v15</span>
+                <span className="text-xs font-bold text-white">
+                  Next.js v15
+                </span>
               </div>
             </motion.div>
           </div>
-
         </div>
       </div>
     </section>
