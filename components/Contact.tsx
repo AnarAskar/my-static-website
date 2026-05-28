@@ -24,11 +24,25 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
 
-    // Simulate real API submission latency
+    const { name, email, message } = formData;
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+    const body = encodeURIComponent(`Hello Anar,
+
+I am ${name} (${email}).
+
+Message:
+${message}
+
+`);
+    const mailtoLink = `mailto:anaraskar356@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+
+    // Keep the success message for UX, it appears after the email client is launched
     setTimeout(() => {
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
-    }, 1200);
+    }, 1200); // Small delay for the animation
   };
 
   return (
