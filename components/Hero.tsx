@@ -105,7 +105,7 @@ export default function Hero() {
             >
               {/* GitHub Custom SVG */}
               <a
-                href="https://github.com/peshang72"
+                href="https://github.com/AnarAskar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-white transition-colors duration-200"
@@ -126,7 +126,7 @@ export default function Hero() {
 
               {/* LinkedIn Custom SVG */}
               <a
-                href="https://www.linkedin.com/in/anar-saeed/"
+                href="https://www.linkedin.com/in/anar-askar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-white transition-colors duration-200"
